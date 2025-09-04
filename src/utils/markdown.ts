@@ -3,23 +3,30 @@ import hljs from 'highlight.js'
 
 // 配置 marked
 marked.setOptions({
-  highlight: function(code, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(code, { language: lang }).value
-      } catch (err) {
-        console.error('代码高亮错误:', err)
-      }
-    }
-    return hljs.highlightAuto(code).value
-  },
   breaks: true,
   gfm: true
 })
 
+// 自定义渲染器用于代码高亮
+const renderer = new marked.Renderer()
+renderer.code = function(code: string, lang: string) {
+  if (lang && hljs.getLanguage(lang)) {
+    try {
+      const highlighted = hljs.highlight(code, { language: lang }).value
+      return `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`
+    } catch (err) {
+      console.error('代码高亮错误:', err)
+    }
+  }
+  const highlighted = hljs.highlightAuto(code).value
+  return `<pre><code class="hljs">${highlighted}</code></pre>`
+}
+
+marked.use({ renderer })
+
 // 渲染 Markdown 内容
 export function renderMarkdown(content: string): string {
-  return marked(content)
+  return marked(content) as string
 }
 
 // 提取 Markdown 标题
