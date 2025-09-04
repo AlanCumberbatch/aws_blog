@@ -2,14 +2,18 @@
   "name": "aws-mk-blog",
   "version": "1.0.0",
   "description": "AWS Markdown Blog - 陈列多个 Markdown 文档的 Vue3 项目",
+  "homepage": "https://alancumberbatch.github.io/aws_blog/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "highlight.js": "^11.9.0",
     "marked": "^12.0.0",
     "vue": "^3.4.0",

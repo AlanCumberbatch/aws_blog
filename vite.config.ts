@@ -9,6 +9,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
+  base: '/aws_blog/',
   server: {
     port: 3000,
     open: true
