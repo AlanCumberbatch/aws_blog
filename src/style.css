@@ -1,0 +1,195 @@
+/* 全局样式 - 复古欧洲风格 */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Baskerville', 'Crimson Text', 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background-color: #f5f1e8;
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(160, 82, 45, 0.05) 0%, transparent 50%);
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 容器样式 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 卡片样式 - 简洁英伦风格 */
+.card {
+  background: #f5f1e8;
+  border: 2px solid #8b4513;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.card:hover {
+  background: #e6d3a3;
+}
+
+/* 按钮样式 - 简洁英伦风格 */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #8b4513;
+  color: #f5f1e8;
+  text-decoration: none;
+  border: 2px solid #8b4513;
+  cursor: pointer;
+  font-family: 'Crimson Text', 'Libre Baskerville', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background: #654321;
+}
+
+.btn-secondary {
+  background: #f5f1e8;
+  color: #8b4513;
+}
+
+.btn-secondary:hover {
+  background: #e6d3a3;
+  color: #2c1810;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Markdown 内容样式 - 简洁英伦风格 */
+.markdown-content {
+  line-height: 1.7;
+  font-family: 'Crimson Text', 'Libre Baskerville', serif;
+  color: #2c1810;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c1810;
+  font-family: 'Libre Baskerville', 'Crimson Text', serif;
+  font-weight: 700;
+}
+
+.markdown-content h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid #8b4513;
+  padding-bottom: 0.5rem;
+}
+
+.markdown-content h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #8b4513;
+  padding-bottom: 0.3rem;
+}
+
+.markdown-content h3 {
+  font-size: 1.5rem;
+  color: #8b4513;
+}
+
+.markdown-content p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-bottom: 1.2rem;
+  padding-left: 2rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.markdown-content blockquote {
+  border-left: 2px solid #8b4513;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #5d4e37;
+  font-style: italic;
+}
+
+.markdown-content code {
+  background-color: #e6d3a3;
+  color: #2c1810;
+  padding: 0.2rem 0.4rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.markdown-content pre {
+  background-color: #2c1810;
+  color: #d4af37;
+  padding: 1rem;
+  border: 1px solid #8b4513;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.markdown-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid #8b4513;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: #8b4513;
+  color: #f8f6f0;
+  font-weight: 600;
+}
+
+.markdown-content td {
+  background-color: #f8f6f0;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}

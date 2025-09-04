@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "Document Archive",
+    "collection": "Collection"
+  },
+  "home": {
+    "title": "Document Collection",
+    "subtitle": "A curated collection of technical documents"
+  },
+  "document": {
+    "back": "← Back to Collection",
+    "notFound": "Document not found",
+    "notFoundMessage": "The document you are looking for does not exist."
+  },
+  "footer": {
+    "text": "© 2024 Document Archive. All rights reserved."
+  }
+}

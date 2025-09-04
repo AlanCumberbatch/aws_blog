@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "文档档案",
+    "collection": "收藏"
+  },
+  "home": {
+    "title": "文档收藏",
+    "subtitle": "精选的技术文档收藏"
+  },
+  "document": {
+    "back": "← 返回收藏",
+    "notFound": "文档未找到",
+    "notFoundMessage": "您查找的文档不存在。"
+  },
+  "footer": {
+    "text": "© 2024 文档档案。保留所有权利。"
+  }
+}
